@@ -87,3 +87,12 @@ footer .social >a:hover{
     color: var(--ns-secondary-color);
     opacity: .90;
 }
+
+/*Styles Used for JavaScript Code*/
+.odd{
+    font-weight: 700;
+}
+
+.even{
+    font-weight: 200;
+}
