@@ -9,7 +9,6 @@ function getValues(){
     //Validate Input
     if(Number.isInteger(startValue) && Number.isInteger(endValue)){
         let numArray = generateNumbers(startValue, endValue);
-
         displayNumbers(numArray);
     }
     else{
@@ -21,8 +20,10 @@ function getValues(){
     }
 }
 
+//Input: Integer, Integer
+//Return: Array of numbers
+//Creates an array of integers from sVal to eVal
 function generateNumbers(sVal, eVal){
-
     let numArray = [];
     for (let i = sVal; i <= eVal; i++){
         numArray.push(i);
@@ -31,8 +32,10 @@ function generateNumbers(sVal, eVal){
     return numArray;
 }
 
+//Requirements: An array of integers
+//Return: none
+//Populates a table with rows counting up from 0 to 100
 function displayNumbers(numArray){
- 
     let templateRows = "";
     let className = "";
     for (let i = 0; i < numArray.length; i++){
