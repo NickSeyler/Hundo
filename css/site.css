@@ -1,8 +1,38 @@
-:root{
-    --ns-dark-color: #212121;
-    --ns-light-color: #eeeeee;
-    --ns-primary-color: #001e43;
-    --ns-secondary-color: #ff993b;
+:root {
+    --ns-header-font: 'Barlow Condensed', sans-serif;
+    --ns-body-font: 'Roboto', sans-serif;
+    --ns-secondary-color: #45596b;
+    --ns-light-color: #bcbecf;
+    --ns-dark-color: #0f0d0d;
+    --ns-primary-color: #381313;
+    --font-size: 1.2rem;
+    --font-weight: 400;
+    --line-height: 1.5;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    font-family: var(--ns-header-font);
+}
+
+body {
+    font-family: var(--ns-body-font);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    color: var(--ns-dark-color);
+    background-color: var(--ns-light-color);
+    --webkit-text-size-adjust: 100%;
 }
 
 main>.container {
