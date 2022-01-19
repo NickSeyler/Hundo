@@ -6,8 +6,6 @@
     --ns-dark-color: #0f0d0d;
     --ns-primary-color: #381313;
     --font-size: 1.2rem;
-    --font-weight: 400;
-    --line-height: 1.5;
 }
 
 h6,
@@ -28,8 +26,6 @@ h1,
 body {
     font-family: var(--ns-body-font);
     font-size: var(--font-size);
-    font-weight: var(--font-weight);
-    line-height: var(--line-height);
     color: var(--ns-dark-color);
     background-color: var(--ns-light-color);
     --webkit-text-size-adjust: 100%;
