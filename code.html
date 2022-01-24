@@ -68,23 +68,86 @@
                 <div class="col-12 col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-js">
-                            //Display message to the user
-                            function getMessage(){
-                                let userMessage = document.getElementById("message").value;
-                                Swal.fire(
-                                    'The App Title',
-                                    userMessage,
-                                    'success'
-                                );
-                            }                       
+                            //get input
+                            function getValues(){
+                                let startValue = document.getElementById("startValue").value;
+                                let endValue = document.getElementById("endValue").value;
+
+                                startValue = parseInt(startValue);
+                                endValue = parseInt(endValue);
+
+                                //Validate Input
+                                if(Number.isInteger(startValue) && Number.isInteger(endValue)){
+                                    let numArray = generateNumbers(startValue, endValue);
+                                    displayNumbers(numArray);
+                                }
+                                else{
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Oops...',
+                                        text: 'Only integers are allowed'
+                                    });
+                                }
+                            }            
                         </code>
                     </pre>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <p>The code is structured in one function.
-                        It accesses the user's input then displays a Sweetalert alert window.</p>
-                    <h5>getMessage</h5>
-                    <p>Prints the user's inputted message.</p>
+                    <h5>getValues</h5>
+                    <p>Get the values of the inputs from the webpage.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <pre class="line-numbers">
+                        <code class="language-js">
+                            //Creates an array of integers from sVal to eVal
+                            function generateNumbers(sVal, eVal){
+                                let numArray = [];
+                                for (let i = sVal; i &lt= eVal; i++){
+                                    numArray.push(i);
+                                }
+
+                                return numArray;
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h5>generateNumbers</h5>
+                    <p>Generate an array of integers</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <pre class="line-numbers">
+                        <code class="language-js">
+                            //Populates a table from the starting value to the ending value
+                            function displayNumbers(numArray){
+                                let templateRows = "";
+                                let className = "";
+                                for (let i = 0; i &lt numArray.length; i++){
+
+                                    if (numArray[i] % 2 == 0){
+                                        className = "even";
+                                    } else {
+                                        className = "odd";
+                                    }
+
+                                    let row = `&lttr&gt&lttd class="${className}"&gt${numArray[i]}&lt/td&gt&lt/tr&gt`;
+                                    templateRows += row;
+                                }
+
+                                document.getElementById("results").innerHTML = templateRows;
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h5>displayNumbers</h5>
+                    <p>Put the numbers onto the webpage</p>
                 </div>
             </div>
         </div>

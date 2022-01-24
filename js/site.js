@@ -15,7 +15,7 @@ function getValues(){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Only integers are allowed for Hundo'
+            text: 'Only integers are allowed'
         });
     }
 }
@@ -34,7 +34,7 @@ function generateNumbers(sVal, eVal){
 
 //Requirements: An array of integers
 //Return: none
-//Populates a table with rows counting up from 0 to 100
+//Populates a table from the starting value to the ending value
 function displayNumbers(numArray){
     let templateRows = "";
     let className = "";
