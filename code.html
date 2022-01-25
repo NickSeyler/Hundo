@@ -105,7 +105,7 @@
                             //Creates an array of integers from sVal to eVal
                             function generateNumbers(sVal, eVal){
                                 let numArray = [];
-                                for (let i = sVal; i &lt= eVal; i++){
+                                for (let i = sVal; i &lt;= eVal; i++){
                                     numArray.push(i);
                                 }
 
@@ -128,7 +128,7 @@
                             function displayNumbers(numArray){
                                 let templateRows = "";
                                 let className = "";
-                                for (let i = 0; i &lt numArray.length; i++){
+                                for (let i = 0; i &lt; numArray.length; i++){
 
                                     if (numArray[i] % 2 == 0){
                                         className = "even";
@@ -136,7 +136,7 @@
                                         className = "odd";
                                     }
 
-                                    let row = `&lttr&gt&lttd class="${className}"&gt${numArray[i]}&lt/td&gt&lt/tr&gt`;
+                                    let row = `&lt;tr&gt;&lt;td class="${className}"&gt;${numArray[i]}&lt;/td&gt;&lt;/tr&gt;`;
                                     templateRows += row;
                                 }
 
